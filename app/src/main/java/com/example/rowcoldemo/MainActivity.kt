@@ -18,30 +18,31 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-            RowColDemoTheme {
+            StringsDemoTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    MainScreen(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
     }
 }
 
+
+@Preview(showBackground = true)
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun MainScreen(modifier: Modifier = Modifier) {
+
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
-    RowColDemoTheme {
-        Greeting("Android")
+    StringsDemoTheme {
+        MainScreen()
     }
+}
+
+@Composable
+fun StringsDemoTheme(content: @Composable () -> Unit) {
+    TODO("Not yet implemented")
 }

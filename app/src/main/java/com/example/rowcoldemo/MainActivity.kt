@@ -44,11 +44,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row(horizontalArrangement = Arrangement.SpaceAround,
-        modifier = modifier.width(1000.dp)) {
-        TextCell("1")
-        TextCell("2")
-        TextCell("3")
+    Row {
+        Text(
+            text = "Large Text",
+            fontSize = 40.sp,
+            fontWeight = FontWeight.Bold
+        )
+        Text(
+            text = "Small Text",
+            fontSize = 32.sp,
+            fontWeight = FontWeight.Bold
+        )
     }
 }
 

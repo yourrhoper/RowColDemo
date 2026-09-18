@@ -44,8 +44,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row(horizontalArrangement = Arrangement.SpaceEvenly,
-        modifier = modifier.height(1000.dp)) {
+    Row(horizontalArrangement = Arrangement.SpaceBetween,
+        modifier = modifier.width(1000.dp)) {
         TextCell("1")
         TextCell("2")
         TextCell("3")
